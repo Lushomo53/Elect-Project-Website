@@ -1,35 +1,32 @@
+import FooterColumn from "./ui/FooterColumn";
+import NavLink from "./navigation/NavLink";
+
 function Footer() {
     return (
         <footer className="bg-green-700 text-white py-10">
             <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-8">
 
-                <div>
-                    <h3 className="font-bold text-lg mb2">ELECT Project</h3>
-                    <p className="text-sm">
-                        Co-funded by the European Union.
-                    </p>
-                </div>
+                <FooterColumn title="ELECT Project">
+                    <p>Co-funded by the European Union.</p>
+                </FooterColumn>
 
-                <div>
-                    <h3 className="font-bold text-lg mb-2">Navigation</h3>
-                    <ul className="space-y-1 text-sm">
-                        <li>Home</li>
-                        <li>About</li>
-                        <li>Updates</li>
-                        <li>Partners</li>
+                <FooterColumn title="Navigation">
+                    <ul className="space-y-2">
+                        <li><NavLink>Home</NavLink></li>
+                        <li><NavLink>About</NavLink></li>
+                        <li><NavLink>Updates</NavLink></li>
+                        <li><NavLink>Partners</NavLink></li>
                     </ul>
-                </div>
+                </FooterColumn>
 
-                <div>
-                    <h3 className="fold-bold text-lg mb-2">Contact</h3>
-                    <p className="text-sm">
-                        Mulungushi University<br />
-                        Zambia
-                    </p>
-                </div>
+                <FooterColumn title="Contact">
+                    <p>electproject@email.com</p>
+                    <p>+260 97 1234567</p>
+                </FooterColumn>
+
             </div>
         </footer>
-    )
+    );
 }
 
 export default Footer;
